@@ -1,35 +1,24 @@
 # FdF
 
+A simple 3D height-map renderer. You can rotate models and switch displays, color is defined by
+relative height in the map.
+
 <img width="1105" alt="Screen Shot 2020-02-25 at 4 39 37 PM" src="https://user-images.githubusercontent.com/57093721/75257338-7c26ba80-57ed-11ea-9c12-0794bc80f550.png">
 
-A simple 3D height-map renderer. You can rotate models, color is defined by
-relative height in the map. More features planned!
-
 ## Features
-* Simple file format definition (array of space-separated integers)
 * 3D rotations with the mouse
-* Camera controls (zoom, translate)
+* Camera controls (zoom, move)
 * Pretty color gradients!
-* Double-buffered
-* Line clipping
 
-### Planned features
-* Other projections (right now it's just orthographic)
-* Different view modes: point map, wireframe, and filled
-* More color modes: gradient, file-defined and z-buffer
-* Depth shader
-* Multithreaded calculations (OpenCL even?)
-* Anti-aliased rendering
-* Level-of-detail (less points when you zoom out on huge maps)
+## Usage
+Re compile with "make re" command and run with ./fdf [map]. (Sample maps can be found in test_maps directory).
+```console
+make re
+./fdf test_maps/42.fdf
+```
 
-## Compiling and running
-Run `make`. An executable will compile. Currently only tested on OS X.
+## Preview
 
-Run it with `./fdf [map]`. A bunch of sample maps are provided in the `maps`
-directory. The one in the screenshot above is `maps/42.fdf`.
+![Screen Recording 2020-02-25 at 4 57 52 PM](https://user-images.githubusercontent.com/57093721/75259088-2273bf80-57f0-11ea-998b-b86eacc01689.gif)
 
-Controls are: drag with left click to rotate, drag with right to zoom, drag with
-both to move around.
-
-## License
-This project is licensed under the GNU General Public License 3.
+![Screen Recording 2020-02-25 at 4 58 11 PM (2)](https://user-images.githubusercontent.com/57093721/75259434-b6458b80-57f0-11ea-953f-47dfc2417617.gif)
